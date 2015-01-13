@@ -3,6 +3,9 @@ package com.epam.kostiuk;
 import com.epam.kostiuk.abstract_factory.BrowserFactory;
 import com.epam.kostiuk.abstract_factory.LocalBrowserFactory;
 import com.epam.kostiuk.abstract_factory.RemoteBrowserFactory;
+import com.epam.kostiuk.adapter.CelsiusAdapter;
+import com.epam.kostiuk.adapter.FahrenheitThermometer;
+import com.epam.kostiuk.adapter.SmartConditioner;
 import com.epam.kostiuk.builder.Car;
 import com.epam.kostiuk.builder.CarFactory;
 import com.epam.kostiuk.builder.FamilyCarBuilder;
@@ -28,6 +31,7 @@ public class Application {
     public static final Logger LOG = Logger.getLogger(Application.class);
 
     public static void main(String args[]) {
+        runAdapter();
 //        runComposite();
 //    runMediator();
 //    runStrategy();
@@ -37,6 +41,13 @@ public class Application {
 //        runAbstractFactory();
 //        runFactoryMethod();
 //        runDecorator();
+    }
+
+    private static void runAdapter() {
+        CelsiusAdapter termometerAdapter = new CelsiusAdapter(new FahrenheitThermometer());
+        SmartConditioner smartConditioner = new SmartConditioner(termometerAdapter);
+        LOG.info("Trying turn on conditioner:");
+        smartConditioner.turnOnConditioner();
     }
 
     private static void runComposite() {
