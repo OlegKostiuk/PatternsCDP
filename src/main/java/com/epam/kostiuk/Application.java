@@ -6,6 +6,10 @@ import com.epam.kostiuk.abstract_factory.RemoteBrowserFactory;
 import com.epam.kostiuk.adapter.CelsiusAdapter;
 import com.epam.kostiuk.adapter.FahrenheitThermometer;
 import com.epam.kostiuk.adapter.SmartConditioner;
+import com.epam.kostiuk.bridge.EconomyEngine;
+import com.epam.kostiuk.bridge.ICar;
+import com.epam.kostiuk.bridge.PowerfullEngine;
+import com.epam.kostiuk.bridge.SportCar;
 import com.epam.kostiuk.builder.Car;
 import com.epam.kostiuk.builder.CarFactory;
 import com.epam.kostiuk.builder.FamilyCarBuilder;
@@ -31,7 +35,8 @@ public class Application {
     public static final Logger LOG = Logger.getLogger(Application.class);
 
     public static void main(String args[]) {
-        runAdapter();
+        runBridge();
+//        runAdapter();
 //        runComposite();
 //    runMediator();
 //    runStrategy();
@@ -43,9 +48,17 @@ public class Application {
 //        runDecorator();
     }
 
+    private static void runBridge() {
+        ICar sportCar = new SportCar(new PowerfullEngine());
+        sportCar.drive();
+
+        ICar economySportCar = new SportCar(new EconomyEngine());
+        economySportCar.drive();
+    }
+
     private static void runAdapter() {
-        CelsiusAdapter termometerAdapter = new CelsiusAdapter(new FahrenheitThermometer());
-        SmartConditioner smartConditioner = new SmartConditioner(termometerAdapter);
+        CelsiusAdapter thermometerAdapter = new CelsiusAdapter(new FahrenheitThermometer());
+        SmartConditioner smartConditioner = new SmartConditioner(thermometerAdapter);
         LOG.info("Trying turn on conditioner:");
         smartConditioner.turnOnConditioner();
     }
