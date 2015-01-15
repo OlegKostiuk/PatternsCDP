@@ -6,7 +6,7 @@ public class FahrenheitThermometer {
 
     public Fahrenheit getTemperature() {
         Fahrenheit f = new Fahrenheit();
-        f.setValue(new Random().nextInt(36)+50);
+        f.setValue(new Random().nextInt(36) + 50);
         return f;
     }
 }

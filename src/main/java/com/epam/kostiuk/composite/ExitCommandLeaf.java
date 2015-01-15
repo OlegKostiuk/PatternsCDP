@@ -1,6 +1,6 @@
 package com.epam.kostiuk.composite;
 
-public class ExitCommandLeaf implements CommandComponent  {
+public class ExitCommandLeaf implements CommandComponent {
 
     @Override
     public String getCommandName() {

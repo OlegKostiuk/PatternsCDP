@@ -11,7 +11,7 @@ public class CelsiusAdapter implements CelsiusThermometer {
     public Celsius getCurrentTemperature() {
         Fahrenheit fahrenheit = fahrenheitThermometer.getTemperature();
         Celsius celsius = new Celsius();
-        celsius.setValue(100.0/(212.0-32.0) * (fahrenheit.getValue()-32.0));
+        celsius.setValue(100.0 / (212.0 - 32.0) * (fahrenheit.getValue() - 32.0));
         return celsius;
     }
 }

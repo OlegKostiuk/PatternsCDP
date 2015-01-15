@@ -36,16 +36,16 @@ public class Application {
 
     public static void main(String args[]) {
         runBridge();
-//        runAdapter();
-//        runComposite();
-//    runMediator();
-//    runStrategy();
-//        runProxy();
-//        runBuilder();
-//        runState();
-//        runAbstractFactory();
-//        runFactoryMethod();
-//        runDecorator();
+        runAdapter();
+        runMediator();
+        runStrategy();
+        runProxy();
+        runBuilder();
+        runState();
+        runAbstractFactory();
+        runFactoryMethod();
+        runDecorator();
+        runComposite();
     }
 
     private static void runBridge() {

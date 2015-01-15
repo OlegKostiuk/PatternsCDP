@@ -8,18 +8,18 @@ public class ConditionerController extends HouseControllerElement {
         super(houseController);
     }
 
-    public void turnOn () {
+    public void turnOn() {
         isTurnedOn = true;
         LOG.info("Conditioner is turned on.");
         changed();
     }
 
-    public void turnOn (int temperature) {
+    public void turnOn(int temperature) {
         isTurnedOn = true;
         LOG.info("Conditioner is turned on.");
         changed();
     }
-    
+
     public void turnOff() {
         isTurnedOn = false;
         LOG.info("Conditioner is turned off.");

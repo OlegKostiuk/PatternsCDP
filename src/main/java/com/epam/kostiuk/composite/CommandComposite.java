@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class CommandComposite implements CommandComponent  {
+public class CommandComposite implements CommandComponent {
 
     private List<CommandComponent> commandComponents = new ArrayList<CommandComponent>();
 
@@ -22,14 +22,14 @@ public class CommandComposite implements CommandComponent  {
     @Override
     public void execute() {
         LOG.info("Choose command:");
-        for (int i = 0; i<commandComponents.size(); i++) {
+        for (int i = 0; i < commandComponents.size(); i++) {
             LOG.info(i + ". " + commandComponents.get(i).getCommandName());
         }
 
         Scanner in = new Scanner(System.in);
         int i = in.nextInt();
-        if (i<commandComponents.size()) {
-        commandComponents.get(i).execute();
+        if (i < commandComponents.size()) {
+            commandComponents.get(i).execute();
         } else {
             LOG.info("Command doesn't exist");
         }
