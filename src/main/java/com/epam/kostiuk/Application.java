@@ -7,6 +7,7 @@ import com.epam.kostiuk.adapter.CelsiusAdapter;
 import com.epam.kostiuk.adapter.FahrenheitThermometer;
 import com.epam.kostiuk.adapter.SmartConditioner;
 import com.epam.kostiuk.bridge.EconomyEngine;
+import com.epam.kostiuk.bridge.FamilyCar;
 import com.epam.kostiuk.bridge.ICar;
 import com.epam.kostiuk.bridge.PowerfullEngine;
 import com.epam.kostiuk.bridge.SportCar;
@@ -36,23 +37,23 @@ public class Application {
 
     public static void main(String args[]) {
         runBridge();
-        runAdapter();
-        runMediator();
-        runStrategy();
-        runProxy();
-        runBuilder();
-        runState();
-        runAbstractFactory();
-        runFactoryMethod();
-        runDecorator();
-        runComposite();
+//        runAdapter();
+//        runMediator();
+//        runStrategy();
+//        runProxy();
+//        runBuilder();
+//        runState();
+//        runAbstractFactory();
+//        runFactoryMethod();
+//        runDecorator();
+//        runComposite();
     }
 
     private static void runBridge() {
         ICar sportCar = new SportCar(new PowerfullEngine());
         sportCar.drive();
 
-        ICar economySportCar = new SportCar(new EconomyEngine());
+        ICar economySportCar = new FamilyCar(new EconomyEngine());
         economySportCar.drive();
     }
 

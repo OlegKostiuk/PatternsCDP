@@ -1,8 +1,10 @@
 package com.epam.kostiuk.bridge;
 
-public class EconomyEngine implements Engine {
+public class EconomyEngine extends Engine {
+
     @Override
-    public void accelerate() {
-        System.out.println("Slow but economy.");
+    public void accelerate(ICar car) {
+        int currentSpeed = car.getSpeed();
+        car.setSpeed(++currentSpeed);
     }
 }

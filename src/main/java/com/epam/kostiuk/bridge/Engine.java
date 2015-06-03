@@ -1,5 +1,9 @@
 package com.epam.kostiuk.bridge;
 
-public interface Engine {
-    public void accelerate();
+public abstract class Engine {
+
+    ICar car;
+
+    public abstract void accelerate(ICar car);
+
 }

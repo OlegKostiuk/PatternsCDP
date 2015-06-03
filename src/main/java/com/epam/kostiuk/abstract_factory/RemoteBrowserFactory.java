@@ -14,7 +14,6 @@ public class RemoteBrowserFactory implements BrowserFactory {
 
     public static final String REMOTE_URL = "http://olgkos:980952c6-0a4e-40d7-8c92-392ba8e2465c@ondemand.saucelabs.com:80/wd/hub";
 
-    @Override
     public WebDriver getChrome() {
         DesiredCapabilities capabilities = getCapabilities("chrome", "31", Platform.XP);
         try {
@@ -26,7 +25,6 @@ public class RemoteBrowserFactory implements BrowserFactory {
         return null;
     }
 
-    @Override
     public WebDriver getFirefox() {
         DesiredCapabilities capabilities = getCapabilities("firefox", "31", Platform.XP);
         try {

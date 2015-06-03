@@ -1,7 +1,22 @@
 package com.epam.kostiuk.bridge;
 
-public interface ICar {
+public abstract class ICar {
 
-    public void drive();
+    protected Engine engine;
 
+    protected int speed = 0;
+
+    public ICar(Engine engine) {
+        this.engine = engine;
+    }
+
+    public abstract void drive();
+
+    public void setSpeed(int speed) {
+        this.speed = speed;
+    }
+
+    public int getSpeed() {
+        return speed;
+    }
 }

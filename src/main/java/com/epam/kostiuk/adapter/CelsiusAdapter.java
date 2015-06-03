@@ -1,13 +1,13 @@
 package com.epam.kostiuk.adapter;
 
 public class CelsiusAdapter implements CelsiusThermometer {
+
     private FahrenheitThermometer fahrenheitThermometer;
 
     public CelsiusAdapter(FahrenheitThermometer fahrenheitThermometer) {
         this.fahrenheitThermometer = fahrenheitThermometer;
     }
 
-    @Override
     public Celsius getCurrentTemperature() {
         Fahrenheit fahrenheit = fahrenheitThermometer.getTemperature();
         Celsius celsius = new Celsius();

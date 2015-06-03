@@ -1,15 +1,16 @@
 package com.epam.kostiuk.bridge;
 
-public class SportCar implements ICar {
-
-    protected Engine engine;
+public class SportCar extends ICar {
 
     public SportCar(Engine engine) {
-        this.engine = engine;
+        super(engine);
     }
 
-    @Override
     public void drive() {
-        engine.accelerate();
+        System.out.println("We will ride fast");
+        while(speed < 200) {
+            System.out.println("Current speed:" + speed);
+            engine.accelerate(this);
+        }
     }
 }

@@ -1,8 +1,10 @@
 package com.epam.kostiuk.bridge;
 
-public class PowerfullEngine implements Engine {
+public class PowerfullEngine extends Engine {
+
     @Override
-    public void accelerate() {
-        System.out.println("Fast drive.");
+    public void accelerate(ICar car) {
+        int currentSpeed = car.getSpeed();
+        car.setSpeed((currentSpeed+1) * 2);
     }
 }

@@ -14,12 +14,10 @@ public class CommandComposite implements CommandComponent {
         this.name = name;
     }
 
-    @Override
     public String getCommandName() {
         return name;
     }
 
-    @Override
     public void execute() {
         LOG.info("Choose command:");
         for (int i = 0; i < commandComponents.size(); i++) {

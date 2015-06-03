@@ -23,77 +23,62 @@ public class WebElementDecorator implements WebElement {
         this.decoratedElement = decoratedElement;
     }
 
-    @Override
     public void click() {
         decoratedElement.click();
     }
 
-    @Override
     public void submit() {
         decoratedElement.submit();
     }
 
-    @Override
     public void sendKeys(CharSequence... keysToSend) {
         decoratedElement.sendKeys();
     }
 
-    @Override
     public void clear() {
         decoratedElement.clear();
     }
 
-    @Override
     public String getTagName() {
         return decoratedElement.getTagName();
     }
 
-    @Override
     public String getAttribute(String name) {
         return decoratedElement.getAttribute(name);
     }
 
-    @Override
     public boolean isSelected() {
         return decoratedElement.isSelected();
     }
 
-    @Override
     public boolean isEnabled() {
         return decoratedElement.isEnabled();
     }
 
-    @Override
     public String getText() {
         return decoratedElement.getText();
     }
 
-    @Override
     public List<WebElement> findElements(By by) {
         return decoratedElement.findElements(by);
     }
 
-    @Override
     public WebElement findElement(By by) {
         return decoratedElement.findElement(by);
     }
 
-    @Override
     public boolean isDisplayed() {
         return decoratedElement.isDisplayed();
     }
 
-    @Override
     public Point getLocation() {
         return decoratedElement.getLocation();
     }
 
-    @Override
     public Dimension getSize() {
         return decoratedElement.getSize();
     }
 
-    @Override
     public String getCssValue(String propertyName) {
         return decoratedElement.getCssValue(propertyName);
     }

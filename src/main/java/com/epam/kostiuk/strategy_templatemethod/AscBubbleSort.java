@@ -2,7 +2,6 @@ package com.epam.kostiuk.strategy_templatemethod;
 
 public class AscBubbleSort implements SortStrategy {
 
-    @Override
     public int[] sort(int[] sortArray) {
 
         for (int i = 0; i < sortArray.length; i++) {
